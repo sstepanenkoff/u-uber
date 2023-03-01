@@ -1,3 +1,13 @@
+@mixin btn_box
+        background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
+        border: 2px
+        border-radius: 4px
+        &:hover
+            cursor: pointer
+            box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5)
+            transform: translateY(-0.1rem)
+            transition: transform 150ms
+
 *
     box-sizing: border-box
     margin: 0
@@ -64,20 +74,13 @@ nav
         margin-top: 69px
         width: 172px
         height: 46px
-        background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
-        border: 2px
-        border-radius: 4px
         font-weight: 400
         font-size: 14px
         align-items: center
         text-align: center
         text-transform: uppercase
         color: #FFFFFF
-        &:hover
-            cursor: pointer
-            box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5)
-            transform: translateY(-0.1rem)
-            transition: transform 150ms
+        @include btn_box
 
 .promo
     min-height: 800px
@@ -112,21 +115,14 @@ nav
         margin: 118px auto 0 auto
         width: 259px
         height: 63px
-        background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
-        border: 2px
-        border-radius: 4px
         font-weight: 400
         font-size: 18px
         align-items: center
         text-align: center
         text-transform: uppercase
         color: #FFFFFF
-        &:hover
-            cursor: pointer
-            box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5)
-            transform: translateY(-0.1rem)
-            transition: transform 150ms
-
+        @include btn_box
+        
 .label
     margin: 0 auto
     height: 24px
