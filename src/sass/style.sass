@@ -8,12 +8,26 @@ $text_color: #1eacc7
 	background-color: #000000
 	color: #ffffff
 	font-size: 11px
-	font-weight: 300
+	font-weight: 400
+	text-transform: uppercase
+	text-align: center
+	border-radius: 2px
+	z-index: 2
+
+@mixin label_white
+	margin: 0 auto
+	height: 24px
+	width: 112px
+	padding: 4px
+	background-color: #ffffff
+	color: #000000
+	font-size: 11px
+	font-weight: 400
 	text-transform: uppercase
 	text-align: center
 	align-items: center
-	border-radius: 1px
-
+	border-radius: 2px
+	z-index: 2
 
 @mixin btn_box
 	background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
@@ -245,3 +259,49 @@ nav
 			margin: 0 auto
 			border-radius: 100%
 			cursor: pointer
+
+.choice
+	position: relative
+	min-height: 750px
+	padding: 57px 0 130px 0
+	background: url('../img/bgs/mobile_app.png') 
+	z-index: -2
+	.black 
+		position: absolute 
+		top: 0
+		left: 0
+		height: 505px
+		width: 100%
+		background-color: #141414
+		z-index: -1
+	.label
+		@include label_white
+	.title
+		margin-bottom: 0
+		margin-top: 38px
+		color: #ffffff
+		font-size: 38px
+		font-weight: 700
+		text-transform: uppercase
+		text-align: center
+	.subtitle
+		font-weight: 400
+		font-size: 17px
+		align-items: center
+		text-align: center
+		color: #ffffff
+	&_img 
+		position: relative
+		display: block
+		margin: 56px auto 0 auto
+		z-index: 1
+	&_descr 
+		text-align: center
+		color: #222222
+		font-size: 17px
+		font-weight: 300
+		line-height: 24px
+	
+
+		
+	
