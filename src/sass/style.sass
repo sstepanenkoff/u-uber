@@ -1,4 +1,6 @@
-$text_color: #1eacc7
+$text_color_blue: #1eacc7
+$text_color_pink: #FF5656
+
 
 @mixin label_black
 	margin: 0 auto
@@ -33,11 +35,13 @@ $text_color: #1eacc7
 	background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
 	border: 2px
 	border-radius: 4px
+	transition: 0.2s linear
 	&:hover
 		cursor: pointer
+		color: #3e3e3e
 		box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5)
 		transform: translateY(-0.1rem)
-		transition: transform 150ms
+		
 
 *
 	box-sizing: border-box
@@ -70,8 +74,17 @@ nav
 		font-weight: 300
 		text-decoration: none
 		transition: 0.1s linear
+		&:after
+			content: ''
+			display: block
+			height: 2px
+			width: 0%
+			background-color: #4CE2FF
+			transition: 0.2s linear
 		&:hover
 			color: #4CE2FF
+			&:after
+				width: 100%
 
 .subheader
 	position: absolute
@@ -153,10 +166,6 @@ nav
 		text-transform: uppercase
 		color: #FFFFFF
 		@include btn_box
-		
-
-
-
 
 .reasons
 	padding: 70px 0 65px 0
@@ -188,7 +197,7 @@ nav
 		width: 340px
 	&_subtitle
 		line-height: 21px
-		color: $text_color
+		color: $text_color_blue
 		font-size: 17px
 		font-weight: 400
 	&_text
@@ -200,7 +209,7 @@ nav
 .mobile
 	background: url("../img/bgs/mobile_bg.jpg") center (center / cover) no-repeat
 	height: 865px
-	padding: 50px 0 80px 0
+	padding: 70px 0 80px 0
 	.row
 		margin-top: 30px
 	.label
@@ -259,6 +268,29 @@ nav
 			margin: 0 auto
 			border-radius: 100%
 			cursor: pointer
+			transition: 0.3s all
+			&:hover
+				background-color: $text_color_blue
+			&:before
+				content: ''
+				display: block
+				width: 14px
+				height: 2px
+				background-color: $text_color_blue
+				transition: 0.3s all
+			&:after
+				content: ''
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				display: block
+				height: 14px
+				width: 2px
+				background-color: $text_color_blue
+				transition: 0.3s all
+			&:hover
+				&:before, &:after
+					background-color: #fff
 
 .choice
 	position: relative
