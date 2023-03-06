@@ -1,7 +1,6 @@
 $text_color_blue: #1eacc7
 $text_color_pink: #FF5656
 
-
 @mixin label_black
 	margin: 0 auto
 	height: 24px
@@ -30,6 +29,16 @@ $text_color_pink: #FF5656
 	align-items: center
 	border-radius: 2px
 	z-index: 2
+
+@mixin title_block
+	margin-top: 30px
+	font-weight: 700
+	font-size: 38px
+	align-items: center
+	text-align: center
+	text-transform: uppercase
+	color: #222222
+
 
 @mixin btn_box
 	background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
@@ -172,13 +181,7 @@ nav
 	.label
 		@include label_black
 	.title
-		margin-bottom: 0
-		margin-top: 38px
-		color: #222222
-		font-size: 38px
-		font-weight: 700
-		text-transform: uppercase
-		text-align: center
+		@include title_block
 	&_block
 		display: flex
 		justify-content: center
@@ -215,13 +218,7 @@ nav
 	.label
 		@include label_black
 	.title
-		margin-top: 30px
-		font-weight: 700
-		font-size: 38px
-		align-items: center
-		text-align: center
-		text-transform: uppercase
-		color: #222222
+		@include title_block
 	.subtitle
 		font-weight: 400
 		font-size: 17px
@@ -309,13 +306,8 @@ nav
 	.label
 		@include label_white
 	.title
-		margin-bottom: 0
-		margin-top: 38px
-		color: #ffffff
-		font-size: 38px
-		font-weight: 700
-		text-transform: uppercase
-		text-align: center
+		@include title_block
+		color: #fff
 	.subtitle
 		font-weight: 400
 		font-size: 17px
@@ -333,3 +325,11 @@ nav
 		font-size: 17px
 		font-weight: 300
 		line-height: 24px
+
+.require
+	padding: 70px 0 80px 0
+	.label
+		@include label_black
+	.title
+		@include title_block
+		
