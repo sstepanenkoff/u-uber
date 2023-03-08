@@ -333,7 +333,7 @@ nav
 	.title
 		@include title_block
 	&_block
-		margin: 33px 0
+		margin: 30px 0
 		&_nmb
 			margin-bottom: 0px
 	&_title
@@ -341,14 +341,36 @@ nav
 		font-size: 16px
 		font-weight: 400
 		&_pink
-			text-transform: uppercase
-			color: $text_color_pink
-	&_list
-		font-weight: 300
-		font-size: 16px
-		line-height: 24px
-		color: #222222
+			
 	&_subtitle
-		font-size: 17px
+		font-size: 16px
 		font-weight: 400
 		color: $text_color_blue
+		text-decoration: underline
+	&_list
+		list-style-type: none
+		padding-left: 50px
+		margin-top: 12px
+		li
+			position: relative
+			font-weight: 300
+			font-size: 16px
+			color: #222222
+			margin-bottom: 6px
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				left: -28px
+				top: 1px
+				width: 21px
+				height: 21px
+				background: url('../icons/checkmark.png') center center / cover no-repeat 
+	.warning
+		.require_title
+			text-transform: uppercase
+			color: $text_color_pink
+		.require_list
+			li
+				&:before
+					background: url('../icons/layer_pink.png') center center / cover no-repeat 
