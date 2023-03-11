@@ -1,0 +1,49 @@
+@mixin label_black
+	margin: 0 auto
+	height: 24px
+	width: 112px
+	padding: 4px
+	background-color: #000000
+	color: #ffffff
+	font-size: 11px
+	font-weight: 400
+	text-transform: uppercase
+	text-align: center
+	border-radius: 2px
+	z-index: 2
+
+@mixin label_white
+	margin: 0 auto
+	height: 24px
+	width: 112px
+	padding: 4px
+	background-color: #ffffff
+	color: #000000
+	font-size: 11px
+	font-weight: 400
+	text-transform: uppercase
+	text-align: center
+	align-items: center
+	border-radius: 2px
+	z-index: 2
+
+@mixin title_block
+	margin-top: 30px
+	font-weight: 700
+	font-size: 38px
+	align-items: center
+	text-align: center
+	text-transform: uppercase
+	color: #222222
+
+@mixin btn_box
+	background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
+	border: 2px
+	border-radius: 4px
+	transition: 0.2s linear
+	&:hover
+		cursor: pointer
+		color: #3e3e3e
+		box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5)
+		transform: translateY(-0.1rem)
+		
