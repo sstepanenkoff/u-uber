@@ -20,7 +20,13 @@
 				font-size: 22px
 	.footer
 		&_wrapper > div
-			width: 40%
+			width: 50%
+			&:nth-child(1)
+				width: 25%
+			&:nth-child(3)
+				width: 25%
+				display: flex 
+				justify-content: flex-end
 @media (max-width: 991px)
 	.menu
 		&_link
@@ -45,6 +51,8 @@
 			font-size: 40px
 		&_subheader
 			font-size: 30px
+		&_descr
+			font-size: 16px
 		&_btn
 			width: 230px
 			height: 55px
@@ -59,10 +67,11 @@
 		.title
 			font-size: 30px
 	.mobile
+		padding: 60px 0 40px 0
 		min-height: 700px
 		&_item
 			width: 210px
-			height: 190px
+			height: 210px
 			&_subtitle
 				font-size: 16px
 	.choice
@@ -72,3 +81,82 @@
 		&_img
 			width: 550px
 			margin: 45px auto 0 auto
+	.require
+		padding: 70px 0 50px 0
+		.title
+			font-size: 30px
+		&_title
+			font-size: 14px
+		&_list
+			li
+				font-size: 14px
+	.footer
+		&_divider
+			display: none
+		&_wrapper
+			flex-wrap: wrap
+		&_wrapper > div 
+			width: 100%
+			display: flex 
+			justify-content: center
+			margin-bottom: 20px
+			&:nth-child(1)
+				width: 100%
+			&:nth-child(3)
+				width: 100%
+				justify-content: center
+@media (max-width: 767px)
+	.menu
+		position: fixed
+		flex-direction: column
+		justify-content: center
+		text-align: center
+		top: 0
+		left: -100%
+		width: 50%
+		height: 100vh
+		padding: 20px 15px
+		background-color: rgb(0, 0, 0, .8)
+		transition: 0.6s all
+		&_active
+			left: 0
+		&_item
+			padding-right: 0
+			border: none
+			margin: 10px 0
+			text-decoration: none
+		&_link
+			font-size: 18px
+			text-transform: uppercase
+			&:after
+				content: ''
+				display: none
+			&:hover
+				color: #4CE2FF
+			&:active
+				color: #0088a3
+	.hamburger
+		display: block
+		position: absolute
+		right: 10px
+		top: 50%
+		transform: translateY(-50%)
+		width: 26px
+		height: 12px
+		span
+			display: block
+			height: 2px
+			width: 100%
+			background-color: #fff
+			margin-bottom: 2px
+			transition: 0.5s all
+		&_active
+			span
+				margin-bottom: -2px
+				&:nth-child(1)
+					transform: translateY(3px) rotate(-45deg)
+				&:nth-child(2)
+					display: none
+				&:nth-child(3)
+					transform: translateY(3px) rotate(45deg)
+					
